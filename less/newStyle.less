@@ -7,6 +7,174 @@ and open the template in the editor.
     Created on : 18-Oct-2015, 12:40:39 PM
     Author     : ericymtai
 */
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+* {
+    box-sizing: border-box;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	main_content: " ";
+	clear: both;
+	height: 0;
+	}
+       
+        
+ // LESS variable
+ @primColor: #188885;   // green
+ @navColor: #eb2b1b;    // red
+ @navSecColor: #2845bf;
+ @bgColor: #fff;
+ @size: 5%;
+        
+ // Mixin
+ .h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    line-height: 1.8em;
+ }
+ .my-mixin(dark; @color) {
+     color: darken(@color, 5%);
+ }
+ .my-mixin(darken; @color) {
+     backgound-color: darken(@color, 10%);
+ }
+ 
+        
+        
+        
+// Global      
 body {
-    background: #ffa;
+    background: @bgColor url(../images/BG-5-b.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#wrapper {
+    width: 1080px;
+    padding-bottom: @size;
+    background-color:  @bgColor;
+    margin: @size auto;
+}
+#main_header h1,
+#main_header h3,
+#sub_header h3,
+aside h3,
+aside p,
+#main_header p,
+#sub_header p {
+    color:  @primColor;
+}
+
+
+// Nav  section
+nav { 
+    padding:0 0 3% @size;
+    color:  @bgColor;
+}
+nav ul {
+    list-style: none; 
+}
+nav ul li {
+    display: inline-block;
+    background-color: @navColor;
+    /*.my-mixin(darken; @navColor);*/
+    margin-right: -1%;
+    padding: 1% 2%;
+}
+nav ul li:hover {
+    .active;
+}
+.active {
+    background-color: @navSecColor;
+}
+nav ul li a {
+    text-decoration: none;
+    color:  @bgColor;
+}
+
+// Header section
+section {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+
+// Header
+header {
+    width: 26%;
+}
+#logo,
+#main_header,
+#sub_header {
+    margin-left: 15%;
+}
+#main_header {
+    margin-top: 2%;
+    line-height: 2em;
+}
+#main_header h1 {
+    font-size: 1.6em;
+    font-weight: 700;
+    .my-mixin(dark; @primColor); 
+}
+#main_header h3,
+#sub_header h3 {
+    .h3;
+}
+#main_header p {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+#sub_header {
+    margin-top: 4%;
+}
+#sub_header p {
+    line-height: 1.8;
+}
+#social_icons {
+    margin: 8% 0 0 30%;
+}
+#social_icons svg {
+    width: 15%;
+    margin-right: 2%;
+}
+.icons {
+    fill: @navColor;
+}
+.icons:hover {
+    fill:  @primColor;
+}
+
+// Aside
+aside {
+    width: 74%;
+    margin: 0 auto;
+}
+aside h3 {
+    .h3;
+    .my-mixin(dark; @primColor); 
+}
+aside p {
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.4em;
 }
