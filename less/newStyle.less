@@ -248,18 +248,44 @@ footer {
     & .pictures {
 
     }
-    & img {
-        width: 10%;
+/*    & img {
+        width: 5%;
         display: -webkit-flex;
         display: flex;
         -webkit-flex-direction: row;
         flex-direction: row;
         float: left;
-        margin: 3% 7%;
+        margin: 3% 7%;*/
         
 /*        -webkit-justify-content: space-between;	
         justify-content: space-between;	*/
         
+    /*}*/
+    & .pic {
+        width: 15%;
+        height: 5em;
+        float: left;
+/*        display: inline-block;
+        margin: auto;*/
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        margin-right: 3%;
+-webkit-align-items: center;
+    align-items: center;
+    }
+    & .pictures .pic1 {
+        background: url(../images/1.jpg) no-repeat;
+        background-size: contain;
+    }
+    & .pictures .pic2 {
+        background: url(../images/2.jpg) no-repeat;
+        background-size: contain;
+    }
+    & .pictures .pic3 {
+        background: url(../images/3.jpg) no-repeat;
+        background-size: contain;
     }
    
 }

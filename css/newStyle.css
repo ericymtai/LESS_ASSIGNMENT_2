@@ -251,6 +251,17 @@ footer {
   width: 100%;
   text-align: center;
   float: left;
+  /*    & img {
+        width: 5%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        float: left;
+        margin: 3% 7%;*/
+  /*        -webkit-justify-content: space-between;	
+        justify-content: space-between;	*/
+  /*}*/
 }
 footer ul {
   list-style: none;
@@ -270,16 +281,31 @@ footer ul li a::after {
 footer ul li:last-child a::after {
   content: "";
 }
-footer img {
-  width: 10%;
+footer .pic {
+  width: 15%;
+  height: 5em;
+  float: left;
+  /*        display: inline-block;
+        margin: auto;*/
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
-  float: left;
-  margin: 3% 7%;
-  /*        -webkit-justify-content: space-between;	
-        justify-content: space-between;	*/
+  margin-right: 3%;
+  -webkit-align-items: center;
+  align-items: center;
+}
+footer .pictures .pic1 {
+  background: url(../images/1.jpg) no-repeat;
+  background-size: contain;
+}
+footer .pictures .pic2 {
+  background: url(../images/2.jpg) no-repeat;
+  background-size: contain;
+}
+footer .pictures .pic3 {
+  background: url(../images/3.jpg) no-repeat;
+  background-size: contain;
 }
 /*@media screen and (max-width:800px) {
     aside {
