@@ -7,6 +7,7 @@ and open the template in the editor.
     Created on : 18-Oct-2015, 12:40:39 PM
     Author     : ericymtai
 */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100.100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
 /* css reset */
 html,
 body,
@@ -78,6 +79,7 @@ td {
 }
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 .clearfix:after {
   visibility: hidden;
@@ -109,6 +111,12 @@ body {
   background-color: rgba(255, 255, 255, 0.94);
   margin: 5% auto;
 }
+@media screen and (max-width: 769px) {
+  #wrapper {
+    width: 94%;
+    margin: 2% auto;
+  }
+}
 #main_header h1,
 #main_header h3,
 #sub_header h3,
@@ -119,28 +127,51 @@ aside p,
 #sub_header h3 {
   color: #188885;
 }
-nav {
-  padding: 0 0 3% 5%;
-  color: rgba(255, 255, 255, 0.94);
+header {
+  margin: 0 0 5% 3.2%;
 }
-nav ul {
+@media screen and (max-width: 769px) {
+  header {
+    width: 100%;
+    margin: 2% 0 0 27%;
+  }
+  header nav {
+    letter-spacing: .05em;
+  }
+  header nav ul li {
+    margin-right: 2%;
+  }
+  header nav ul li a {
+    margin-bottom: 3%;
+  }
+}
+@media screen and (max-width: 410px) {
+  header {
+    margin: 2% 0 0 10%;
+  }
+  header nav ul li a {
+    margin-bottom: 5%;
+  }
+}
+header nav ul {
   list-style: none;
 }
-nav ul li {
+header nav ul li a {
   display: inline-block;
-  background-color: #ff5a1d;
-  margin-right: -1%;
-  padding: 1% 2%;
-}
-nav ul li:hover {
-  background-color: #2845bf;
-}
-nav ul li a {
+  float: left;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.94);
+  background-color: #e93f00;
+  padding: 1% 3% 1%;
+  letter-spacing: .1em;
+}
+header nav ul li a:hover {
+  background-color: #2845bf;
+  color: #fff;
 }
 .active {
   background-color: #2845bf;
+  color: #fff;
 }
 section {
   width: 100%;
@@ -150,167 +181,307 @@ section {
   flex-direction: row;
   float: left;
 }
-header {
-  width: 25%;
+section main {
+  width: 30%;
   float: left;
-  clear: right;
 }
-#main_header {
-  margin-top: 2%;
-  line-height: 2em;
-}
-#main_header h1 {
-  font-size: 1.6em;
-  font-weight: 700;
-  color: #147270;
-}
-#main_header h3,
-#sub_header h3 {
-  font-size: 1.4em;
-  font-weight: 600;
-  line-height: 1.8em;
-}
-#main_header p {
-  font-size: 1.2em;
-  font-weight: 400;
-  color: #e60000;
-}
-#logo,
+section #logo,
 #main_header,
 #sub_header {
   margin-left: 10%;
   width: 80%;
 }
-#logo img {
+section #logo img {
   width: 100%;
 }
-#sub_header {
-  margin-top: 4%;
+section #main_header {
+  width: 80%;
+  margin-top: 2%;
+  margin-left: 10%;
+  line-height: 2em;
 }
-#sub_header p {
+section #main_header h1 {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #147270;
+}
+section #main_header h3 {
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1.8em;
+  font-style: italic;
+}
+section #main_header p {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #e60000;
+}
+section hr {
+  width: 80%;
+  margin-bottom: 15%;
+}
+section #sub_header {
+  width: 80%;
+  margin-top: 4%;
+  margin-left: 10%;
+}
+section #sub_header p {
   line-height: 1.8;
 }
-#social_icons {
-  margin: 8% 0 0 30%;
+section #social_icons {
+  text-align: center;
+  margin-right: 5%;
 }
-#social_icons svg {
-  width: 17%;
-  margin-right: 2%;
+section #social_icons svg {
+  width: 13%;
+  margin: 5%;
 }
-.icons {
+section .icons {
   fill: #d92213;
 }
-.icons:hover {
+section .icons:hover {
   fill: #0d4745;
 }
-aside {
-  width: 75%;
+section aside {
+  width: 70%;
   float: left;
 }
-aside hr {
+section aside hr {
   width: 95%;
   margin-bottom: 8%;
   float: left;
 }
-aside h2 {
+section aside h2 {
   font-size: 1.8em;
   font-weight: 900;
   line-height: .4em;
+  font-style: italic;
+  letter-spacing: .03em;
   color: #d00c13;
   margin: 2% 0 3%;
 }
-aside h3 {
+section aside h3 {
   font-size: 1.4em;
   font-weight: 600;
   line-height: 1.8em;
   color: #147270;
+  margin-top: 5%;
 }
-aside p {
-  font-size: 1.2em;
-  font-weight: 400;
+section aside p {
+  font-size: 1em;
+  font-weight: 100;
+  font-style: italic;
   line-height: 1.4em;
   color: #1d771d;
 }
-aside .content {
-  display: block;
-  float: left;
-}
-aside img {
+section aside img {
   width: 20%;
   float: left;
 }
-aside .sub_content p {
+section aside .sub_content {
   width: 70%;
   margin-left: 2%;
-  display: block;
   float: left;
   font-size: 1.1em;
   color: #0c6a34;
 }
+section .aside_content {
+  padding-right: 3%;
+}
+section .aside_content > p:first-child {
+  margin: 5% 0;
+}
+section .aside_content span {
+  color: #eb2b1b;
+}
+section .aside_content hr {
+  margin: 5% 0 1%;
+}
+section .aside_content h2 {
+  margin: 13% 0 5%;
+}
+section .aside_content h4 {
+  color: #1d771d;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+section .aside_content ul {
+  list-style-position: inside;
+}
+section .aside_content ul li {
+  margin-left: 5%;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #1d771d;
+}
+section .aside_content img {
+  margin: 5% 25%;
+  width: 40%;
+}
+section .content_text p:nth-child(3) {
+  color: pink;
+}
+section .content_text p:nth-child(3)::after {
+  content: "find a book";
+  color: red;
+}
+@media screen and (max-width: 769px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  section #logo,
+  #main_header,
+  #sub_header {
+    width: 30%;
+    margin: 0 auto;
+  }
+  section main {
+    width: 100%;
+    border-bottom: 2px solid #ddd;
+  }
+  section #main_header {
+    width: 100%;
+    margin-bottom: 5%;
+    margin-left: 0;
+    text-align: center;
+  }
+  section #sub_header {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+  section #social_icons {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  section #social_icons svg {
+    margin: 3% 3% 5% 0;
+    width: 8%;
+  }
+  section aside {
+    width: 100%;
+    text-align: center;
+  }
+  section aside hr {
+    width: 65%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    float: none;
+  }
+  section aside h2 {
+    margin-top: 5%;
+    line-height: 1.5em;
+  }
+  section aside p {
+    display: block;
+    margin-left: 18%;
+    width: 80%;
+    font-size: 1.1em;
+  }
+  section aside img {
+    margin-bottom: 5%;
+    margin-left: 30%;
+    width: 40%;
+  }
+  section aside .sub_content {
+    width: 85%;
+  }
+}
+#info_section,
 footer {
   width: 100%;
   text-align: center;
   float: left;
-  /*    & img {
-        width: 5%;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: row;
-        flex-direction: row;
-        float: left;
-        margin: 3% 7%;*/
-  /*        -webkit-justify-content: space-between;	
-        justify-content: space-between;	*/
-  /*}*/
+  margin: 2% 0;
+  background: rgba(242, 242, 242, 0.94);
 }
+#info_section p {
+  margin: .75em 0;
+  font-size: 1em;
+}
+#info_section p + p {
+  margin: -0.5em 0 0;
+}
+#info_section ul,
 footer ul {
   list-style: none;
 }
+#info_section ul li,
 footer ul li {
   display: inline-block;
-  margin-right: .5%;
+  margin-right: 0.5%;
 }
+#info_section ul li a,
 footer ul li a {
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 1em;
+  color: #97a7e9;
 }
+#info_section ul li a::after,
 footer ul li a::after {
   content: " |";
-  margin-right: 5%;
+  margin: 0 1em;
+  font-style: normal;
   color: #eb2b1b;
 }
+#info_section ul li:last-child a::after,
 footer ul li:last-child a::after {
   content: "";
 }
-footer .pic {
-  width: 15%;
-  height: 5em;
-  float: left;
-  /*        display: inline-block;
-        margin: auto;*/
+#info_section .pictures {
+  width: 100%;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  margin-right: 3%;
-  -webkit-align-items: center;
-  align-items: center;
 }
-footer .pictures .pic1 {
-  background: url(../images/1.jpg) no-repeat;
-  background-size: contain;
+#info_section .picFrame {
+  width: 33%;
+  margin: 3% 0;
+  float: left;
 }
-footer .pictures .pic2 {
-  background: url(../images/2.jpg) no-repeat;
-  background-size: contain;
+#info_section img {
+  width: 25%;
 }
-footer .pictures .pic3 {
-  background: url(../images/3.jpg) no-repeat;
-  background-size: contain;
+@media screen and (max-width: 769px) {
+  #info_section,
+  footer {
+    /*        .pictures {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        };*/
+  }
+  #info_section p {
+    font-size: 1.25em;
+  }
+  #info_section ul li a,
+  footer ul li a {
+    font-size: 1em;
+    line-height: 2.5em;
+  }
+  #info_section .picFrame {
+    width: 100%;
+  }
+  #info_section img {
+    width: 40%;
+  }
 }
-/*@media screen and (max-width:800px) {
-    aside {
-    width: 50%;
-    }
-    
-}*/
+@media screen and (max-width: 320px) {
+  #info_section .pictures {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  #info_section img {
+    width: 25%;
+  }
+}
+footer {
+  background: transparent;
+}
+footer ul li a {
+  color: #acb9ee;
+}
 /*# sourceMappingURL=newStyle.css.map */

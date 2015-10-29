@@ -1,0 +1,31 @@
+ // LESS variable
+ @primColor: #188885;   // green
+ @navColor: #eb2b1b;    // red
+ @navSecColor: #2845bf; // dark blue
+ @bgColor: rgba(255,255,255,.94);
+ @size: 5%;
+        
+ 
+ // LESS Mixin
+ .h2 {
+    font-size: 1.8em;
+    font-weight: 900;
+    line-height: .4em;
+ }
+ .h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    line-height: 1.8em;
+ }
+ .my-mixin-dark(@color: @primColor) {
+     color: darken(@color, @size);
+ }
+ .my-mixin-bgDarken(@color: @navColor) {
+     background-color: darken(@color, @size * 4);
+ }
+ 
+
+ 
+        
+ 
+ 

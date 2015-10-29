@@ -14,16 +14,18 @@ and open the template in the editor.
     <body>
 
         <div id="wrapper">
-           <nav>
-                <ul>
-                    <li class="active"><a href="index.html"></a>HOME</li>
-                    <li><a href="register.html">REGISTER</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>
-            </nav>
-            
+           <header>
+                <nav>
+                     <ul>
+                         <li><a href="index.html" class="active">HOME</a></li>
+                         <li><a href="register.html">REGISTER</a></li>
+                         <li><a href="about.html">ABOUT</a></li>
+                     </ul>
+                 </nav>
+            </header>
+
             <section>
-                <header class="clearfix">
+                <main>
                     <div id="logo">
                         <img src="images/logo.png" alt="logo image">
                     </div>
@@ -33,7 +35,7 @@ and open the template in the editor.
                        <h3>Web Design</h3>
                        <p>2015-2016</p>
                     </div>  <!--end #main_header -->
-
+                    <hr>
                     <div id="sub_header">
                        <h3>Where's Wallace?</h3>
                        <p>I'ma get my own man.</p>
@@ -53,7 +55,7 @@ and open the template in the editor.
                             <path class="icons" d="M53.334 0h-42.666c-5.867 0-10.668 4.801-10.668 10.668v42.664c0 5.871 4.801 10.668 10.668 10.668h42.666c5.867 0 10.666-4.797 10.666-10.668v-42.664c0-5.867-4.799-10.668-10.666-10.668zM47.905 23.843c0.016 0.352 0.024 0.706 0.024 1.062 0 10.844-8.254 23.349-23.349 23.349-4.634 0-8.948-1.359-12.58-3.687 0.642 0.076 1.295 0.115 1.958 0.115 3.845 0 7.383-1.312 10.192-3.513-3.591-0.066-6.622-2.439-7.666-5.699 0.501 0.096 1.015 0.148 1.544 0.148 0.748 0 1.474-0.101 2.162-0.288-3.754-0.754-6.583-4.071-6.583-8.047 0-0.035 0-0.069 0.001-0.103 1.106 0.615 2.372 0.984 3.717 1.026-2.202-1.472-3.651-3.983-3.651-6.831 0-1.504 0.405-2.914 1.111-4.126 4.048 4.965 10.094 8.232 16.915 8.574-0.14-0.601-0.212-1.227-0.212-1.87 0-4.532 3.675-8.206 8.206-8.206 2.36 0 4.493 0.997 5.99 2.591 1.869-0.368 3.626-1.051 5.211-1.991-0.613 1.916-1.914 3.525-3.608 4.54 1.66-0.198 3.242-0.639 4.713-1.292-1.1 1.645-2.491 3.091-4.095 4.248z" fill="#800"></path>
                        </svg>
                     </div>  <!--end #social_icons -->
-                </header>
+                </main>
             
                 <aside class="clearfix">
                     <h3>LESS and GIT assignment</h3>
@@ -61,22 +63,22 @@ and open the template in the editor.
                     <p>I look at you these days, String, you know what I see?</p>
                     <p>Just maybe, not smart enough for them out there.</p>
                     <hr>
-                    
-                    
                     <h2>2015-2016 Maze Playground</h2>
                     <h2>Join us!</h2>
                     <div class="content">
-                    <img src="images/group.jpg" alt="group image">
+                        <img src="images/group.jpg" alt="group image">
                         <div class="sub_content">
-                            <p>Marlo: What the fuck you know about what I need on my mind, motherfucker? My name was on the street?</p>
+                            <p>Marlo: What the hell you know about what I need on my mind, mother? My name was on the street?</p>
+                            <br>
                             <p>Bodie: I feel old. I been out there since I was 13.</p>
+                            <br>
                             <p>Kima: How come they know you're police when they hook up with you. And they know you're police when they move in. </p>
-                        </div>  <!--end .sub_content -->
-                    </div>   <!--end .content -->
-
+                        </div>  <!-- end .sub_content  -->
+                    </div>  <!--end .content--> 
                 </aside>
             </section>
-            <footer>
+            
+            <div id="info_section">
                 <p>Look at our previous maze playground!</p>
                 <ul>
                     <li><a href="#">2015 Maze</a></li>
@@ -85,17 +87,25 @@ and open the template in the editor.
                     <li><a href="#">2012 Maze</a></li>
                     <li><a href="#">2011 Maze</a></li>
                 </ul>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                 <div class="pictures">
-                    <div class="pic pic1"></div>
-                    <div class="pic pic2"></div>
-                    <div class="pic pic3"></div>
-<!--                    <img src="images/1.jpg" alt="flower"/>
-                    <img src="images/2.jpg" alt="flower"/>-->
-                    <!--<img src="images/3.jpg" alt="flower"/>-->
+                    <div class="picFrame"><img src="images/1.jpg" alt="flower"/></div>
+                    <div class="picFrame"><img src="images/2.jpg" alt="flower"/></div>
+                    <div class="picFrame"><img src="images/3.jpg" alt="flower"/></div>
+                    
+                    
+                    
                 </div>  <!--end .pictures -->
-            </footer>
-
+            </div>
             
+            <footer>
+                <ul>
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Print map</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </footer>
         </div>  <!--end #wrapper -->
     </body>
 </html>
