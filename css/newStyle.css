@@ -274,6 +274,14 @@ section aside p {
   line-height: 1.4em;
   color: #1d771d;
 }
+section aside a {
+  text-decoration: none;
+  color: #d00c13;
+}
+section aside a:hover {
+  color: #188885;
+  text-decoration: underline;
+}
 section aside img {
   width: 20%;
   float: left;
@@ -288,7 +296,8 @@ section aside .sub_content {
 section .aside_content {
   padding-right: 3%;
 }
-section .aside_content > p:first-child {
+section .aside_content > p:first-child,
+section .res_content {
   margin: 5% 0;
 }
 section .aside_content span {
@@ -318,13 +327,6 @@ section .aside_content ul li {
 section .aside_content img {
   margin: 5% 25%;
   width: 40%;
-}
-section .content_text p:nth-child(3) {
-  color: pink;
-}
-section .content_text p:nth-child(3)::after {
-  content: "find a book";
-  color: red;
 }
 @media screen and (max-width: 769px) {
   section {
@@ -389,6 +391,30 @@ section .content_text p:nth-child(3)::after {
   section aside .sub_content {
     width: 85%;
   }
+  section .aside_content {
+    padding-right: 3%;
+  }
+  section .aside_content > p:first-child,
+  section .res_content {
+    margin: 5% auto;
+  }
+  section .aside_content p {
+    margin: 0 auto;
+  }
+  section .aside_content hr {
+    margin: 5% auto 1% ;
+    width: 50%;
+  }
+  section .aside_content h4 {
+    margin-bottom: 1%;
+  }
+  section .aside_content ul li {
+    margin-left: 0;
+  }
+  section .aside_content img {
+    margin: 5% 30%;
+    width: 40%;
+  }
 }
 #info_section,
 footer {
@@ -422,12 +448,21 @@ footer ul li a {
   font-size: 1em;
   color: #97a7e9;
 }
+#info_section ul li a:hover,
+footer ul li a:hover {
+  text-decoration: underline;
+  color: #188885;
+}
 #info_section ul li a::after,
-footer ul li a::after {
+footer ul li a::after,
+footer ul li a:hover::after {
   content: " |";
   margin: 0 1em;
   font-style: normal;
   color: #eb2b1b;
+}
+#info_section ul li a::after:hover {
+  text-decoration: none !important;
 }
 #info_section ul li:last-child a::after,
 footer ul li:last-child a::after {
@@ -483,5 +518,8 @@ footer {
 }
 footer ul li a {
   color: #acb9ee;
+}
+footer ul li a:hover {
+  color: #f9c4bf;
 }
 /*# sourceMappingURL=newStyle.css.map */

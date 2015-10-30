@@ -188,6 +188,14 @@ section {
             line-height: 1.4em;
             .my-mixin-dark(forestgreen); 
         };
+        a {
+          text-decoration: none;
+          .my-mixin-dark(#e80d15); 
+          &:hover {
+            color: @primColor;
+            text-decoration: underline;
+          };
+        };
         img {
             width: 20%;
             float: left;
@@ -233,18 +241,9 @@ section {
          img {
              margin: 5% 25%;
              width: 40%;
-         }
+         };
      }
-     .content_text {
-             p:nth-child(3)  {
-                 color: pink;
-                &::after{
-                    content: "find a book";
-                   color: red;   
-                   };
-            };
-
-     }
+     .res_content:extend(section .aside_content > p:first-child) {}
 
     @media screen and (max-width: 769px) {
         -webkit-flex-direction: column;
@@ -305,6 +304,29 @@ section {
                 width: 85%;
             };
         }   // media aside
+        .aside_content {
+            padding-right: 3%;
+            & > p:first-child {
+            margin: 5% auto;
+        };
+        p {
+            margin: 0 auto;
+        };
+        hr {
+            margin: 5% auto 1% ;
+            width: 50%;
+        };
+        h4 {
+            margin-bottom: 1%;
+        };
+        ul li{
+            margin-left: 0;
+        };
+        img {
+             margin: 5% 30%;
+             width: 40%;
+         };
+        }; // media aside_content
     }   // media
 }   // section main
 
@@ -333,11 +355,18 @@ section {
                 font-style: italic;
                 font-size: 1em;
                 color: lighten(@navSecColor, 30%);
+                &:hover {
+                    text-decoration: underline;
+                    color: @primColor;
+                };  // ul li a:hover
                 &::after {
-                content: " |";
-                margin: 0 1em;
-                font-style: normal;
-                color: @navColor;
+                    content: " |";
+                    margin: 0 1em;
+                    font-style: normal;
+                    color: @navColor;
+                    &:hover {
+                        text-decoration: none !important;
+                    };
                 };  // ul li a:after
             };  // ul li a
             &:last-child a::after  {
@@ -398,6 +427,11 @@ footer:extend(#info_section) {
     };
     ul li a:extend(#info_section ul li a) {
         color: lighten(@navSecColor, 35%);
+        &::after:extend(#info_section ul li a::after) {
+        };
+    };
+    ul li a:hover:extend(#info_section ul li a:hover) {
+        color: lighten(@navColor, 35%);
         &::after:extend(#info_section ul li a::after) {
         };
     };
