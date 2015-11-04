@@ -460,9 +460,7 @@ footer ul li a:hover::after {
   margin: 0 1em;
   font-style: normal;
   color: #eb2b1b;
-}
-#info_section ul li a::after:hover {
-  text-decoration: none !important;
+  display: inline-block;
 }
 #info_section ul li:last-child a::after,
 footer ul li:last-child a::after {
