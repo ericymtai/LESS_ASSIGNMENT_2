@@ -117,56 +117,67 @@ body {
     margin: 2% auto;
   }
 }
-#main_header h1,
-#main_header h3,
-#sub_header h3,
-aside h3,
-aside p,
-#main_header p,
-#sub_header p,
-#sub_header h3 {
+#main_head_content h1,
+#main_head_content h3,
+#main_head_content p,
+#sub_head_content h3,
+#sub_head_content p,
+article h3,
+article p,
+#sub_head_content h3 {
   color: #188885;
 }
 header {
   margin: 0 0 5% 3.2%;
 }
-@media screen and (max-width: 769px) {
-  header {
-    margin: 0;
-  }
-  header nav {
-    width: 100%;
-  }
-  header nav ul {
-    margin: 0 15%;
-  }
-  header nav ul li a {
-    margin: 0 7% 0 0;
-  }
-}
-@media screen and (max-width: 410px) {
-  header {
-    margin: 2% 0 0 10%;
-  }
-  header nav ul li a {
-    margin: 5% 0;
-  }
-}
 header nav ul {
   list-style: none;
+  margin: 0;
+}
+header nav ul li {
+  display: inline-block;
+  margin: 0;
 }
 header nav ul li a {
-  display: inline-block;
-  float: left;
+  display: block;
+  font-size: 1.7em;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.94);
   background-color: #e93f00;
-  padding: 1% 3% 1%;
+  /*padding: 2% 4% 2%;*/
   letter-spacing: .1em;
 }
 header nav ul li a:hover {
   background-color: #2845bf;
   color: #fff;
+}
+@media screen and (max-width: 769px) {
+  header {
+    margin: 0;
+  }
+  header .mainNav {
+    text-align: center;
+  }
+  header nav {
+    width: 100%;
+  }
+  header nav ul {
+    margin: 0 auto;
+  }
+  header nav ul li a {
+    font-size: .4em;
+    margin-bottom: 1em;
+    /*margin:  0 7% 0 0;*/
+  }
+}
+@media screen and (max-width: 410px) {
+  header {
+    /*margin: 2% 0 0 10%;*/
+    margin: 2% 0;
+  }
+  header nav ul li a {
+    margin: 5% 0;
+  }
 }
 .active {
   background-color: #2845bf;
@@ -185,32 +196,32 @@ section main {
   float: left;
 }
 section #logo,
-#main_header,
-#sub_header {
+#main_head_content,
+#sub_head_content {
   margin-left: 10%;
   width: 80%;
 }
 section #logo img {
   width: 100%;
 }
-section #main_header {
+section #main_head_content {
   width: 80%;
   margin-top: 2%;
   margin-left: 10%;
   line-height: 2em;
 }
-section #main_header h1 {
+section #main_head_content h1 {
   font-size: 1.6em;
   font-weight: 700;
   color: #147270;
 }
-section #main_header h3 {
+section #main_head_content h3 {
   font-size: 1.4em;
   font-weight: 600;
   line-height: 1.8em;
   font-style: italic;
 }
-section #main_header p {
+section #main_head_content p {
   font-size: 1.2em;
   font-weight: 500;
   color: #e60000;
@@ -219,12 +230,12 @@ section hr {
   width: 80%;
   margin-bottom: 15%;
 }
-section #sub_header {
+section #sub_head_content {
   width: 80%;
   margin-top: 4%;
   margin-left: 10%;
 }
-section #sub_header p {
+section #sub_head_content p {
   line-height: 1.8;
 }
 section #social_icons {
@@ -241,16 +252,16 @@ section .icons {
 section .icons:hover {
   fill: #0d4745;
 }
-section aside {
+section article {
   width: 70%;
   float: left;
 }
-section aside hr {
+section article hr {
   width: 95%;
   margin-bottom: 8%;
   float: left;
 }
-section aside h2 {
+section article h2 {
   font-size: 1.8em;
   font-weight: 900;
   line-height: .4em;
@@ -260,33 +271,33 @@ section aside h2 {
   clear: left;
   margin: 2% 0 3%;
 }
-section aside h3 {
+section article h3 {
   font-size: 1.4em;
   font-weight: 600;
   line-height: 1.8em;
   color: #147270;
   margin-top: 5%;
 }
-section aside p {
+section article p {
   font-size: 1em;
   font-weight: 100;
   font-style: italic;
   line-height: 1.4em;
   color: #1d771d;
 }
-section aside a {
+section article a {
   text-decoration: none;
   color: #d00c13;
 }
-section aside a:hover {
+section article a:hover {
   color: #188885;
   text-decoration: underline;
 }
-section aside img {
+section article img {
   width: 20%;
   float: left;
 }
-section aside .image {
+section article .image {
   width: 60%;
   min-height: 20em;
   margin: 5% auto;
@@ -294,45 +305,45 @@ section aside .image {
   background-repeat: no-repeat;
   background-size: cover;
 }
-section aside .sub_content {
+section article .sub_content {
   width: 70%;
   margin-left: 2%;
   float: left;
   font-size: 1.1em;
   color: #0c6a34;
 }
-section .aside_content {
+section .article_content {
   padding-right: 3%;
 }
-section .aside_content > p:first-child,
+section .article_content > p:first-child,
 section .res_content {
   margin: 5% 0;
 }
-section .aside_content span {
+section .article_content span {
   color: #eb2b1b;
 }
-section .aside_content hr {
+section .article_content hr {
   margin: 5% 0 1%;
 }
-section .aside_content h2 {
+section .article_content h2 {
   margin: 13% 0 5%;
 }
-section .aside_content h4 {
+section .article_content h4 {
   color: #1d771d;
   font-size: 1.1em;
   font-weight: 700;
 }
-section .aside_content ul {
+section .article_content ul {
   list-style-position: inside;
 }
-section .aside_content ul li {
+section .article_content ul li {
   margin-left: 5%;
   font-weight: 300;
   font-size: 1em;
   line-height: 1.5em;
   color: #1d771d;
 }
-section .aside_content img {
+section .article_content img {
   margin: 5% 25%;
   width: 40%;
 }
@@ -342,8 +353,8 @@ section .aside_content img {
     flex-direction: column;
   }
   section #logo,
-  #main_header,
-  #sub_header {
+  #main_head_content,
+  #sub_head_content {
     width: 30%;
     margin: 0 auto;
   }
@@ -351,13 +362,13 @@ section .aside_content img {
     width: 100%;
     border-bottom: 2px solid #ddd;
   }
-  section #main_header {
+  section #main_head_content {
     width: 100%;
     margin-bottom: 5%;
     margin-left: 0;
     text-align: center;
   }
-  section #sub_header {
+  section #sub_head_content {
     width: 100%;
     margin-left: 0;
     text-align: center;
@@ -372,55 +383,55 @@ section .aside_content img {
     margin: 3% 3% 5% 0;
     width: 8%;
   }
-  section aside {
+  section article {
     width: 100%;
     text-align: center;
   }
-  section aside hr {
+  section article hr {
     width: 65%;
     margin-top: 25%;
     margin-bottom: 10%;
     float: none;
   }
-  section aside h2 {
+  section article h2 {
     margin-top: 5%;
     line-height: 1.5em;
   }
-  section aside p {
+  section article p {
     display: block;
     margin-left: 18%;
     width: 80%;
     font-size: 1.1em;
   }
-  section aside img {
+  section article img {
     margin-bottom: 5%;
     margin-left: 30%;
     width: 40%;
   }
-  section aside .sub_content {
+  section article .sub_content {
     width: 85%;
   }
-  section .aside_content {
+  section .article_content {
     padding-right: 3%;
   }
-  section .aside_content > p:first-child,
+  section .article_content > p:first-child,
   section .res_content {
     margin: 5% auto;
   }
-  section .aside_content p {
+  section .article_content p {
     margin: 0 auto;
   }
-  section .aside_content hr {
+  section .article_content hr {
     margin: 5% auto 1% ;
     width: 50%;
   }
-  section .aside_content h4 {
+  section .article_content h4 {
     margin-bottom: 1%;
   }
-  section .aside_content ul li {
+  section .article_content ul li {
     margin-left: 0;
   }
-  section .aside_content img {
+  section .article_content img {
     margin: 5% 30%;
     width: 40%;
   }
