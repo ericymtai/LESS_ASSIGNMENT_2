@@ -132,17 +132,16 @@ header {
 }
 @media screen and (max-width: 769px) {
   header {
-    width: 100%;
-    margin: 2% 0 0 27%;
+    margin: 0;
   }
   header nav {
-    letter-spacing: .05em;
+    width: 100%;
   }
-  header nav ul li {
-    margin-right: 2%;
+  header nav ul {
+    margin: 0 15%;
   }
   header nav ul li a {
-    margin-bottom: 3%;
+    margin: 0 7% 0 0;
   }
 }
 @media screen and (max-width: 410px) {
@@ -150,7 +149,7 @@ header {
     margin: 2% 0 0 10%;
   }
   header nav ul li a {
-    margin-bottom: 5%;
+    margin: 5% 0;
   }
 }
 header nav ul {
@@ -258,6 +257,7 @@ section aside h2 {
   font-style: italic;
   letter-spacing: .03em;
   color: #d00c13;
+  clear: left;
   margin: 2% 0 3%;
 }
 section aside h3 {
@@ -285,6 +285,14 @@ section aside a:hover {
 section aside img {
   width: 20%;
   float: left;
+}
+section aside .image {
+  width: 60%;
+  min-height: 20em;
+  margin: 5% auto;
+  background: url("../images/4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 section aside .sub_content {
   width: 70%;
@@ -357,6 +365,7 @@ section .aside_content img {
   section #social_icons {
     width: 100%;
     margin: 0;
+    margin-left: 2%;
     text-align: center;
   }
   section #social_icons svg {
@@ -369,7 +378,7 @@ section .aside_content img {
   }
   section aside hr {
     width: 65%;
-    margin-top: 5%;
+    margin-top: 25%;
     margin-bottom: 10%;
     float: none;
   }
@@ -426,7 +435,7 @@ footer {
 }
 #info_section p {
   margin: .75em 0;
-  font-size: 1em;
+  font-size: 1.25em;
 }
 #info_section p + p {
   margin: -0.5em 0 0;
@@ -438,7 +447,8 @@ footer ul {
 #info_section ul li,
 footer ul li {
   display: inline-block;
-  margin-right: 0.5%;
+  margin: auto;
+  margin-left: 5%;
 }
 #info_section ul li a,
 footer ul li a {
@@ -480,32 +490,41 @@ footer ul li:last-child a::after {
   width: 25%;
 }
 @media screen and (max-width: 769px) {
-  #info_section,
-  footer {
-    /*        .pictures {
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        };*/
-  }
   #info_section p {
-    font-size: 1.25em;
+    font-size: 1.15em;
+    width: 85%;
+    margin: 5% auto;
+  }
+  #info_section p + p {
+    /*                font-size: .9em;*/
+    width: 85%;
+    margin: 1% auto 2%;
   }
   #info_section ul li a,
   footer ul li a {
     font-size: 1em;
     line-height: 2.5em;
+    margin: 0 auto;
   }
   #info_section .picFrame {
     width: 100%;
   }
   #info_section img {
-    width: 40%;
+    width: 50%;
   }
 }
 @media screen and (max-width: 320px) {
   #info_section .pictures {
     -webkit-flex-direction: column;
     flex-direction: column;
+  }
+  #info_section p {
+    width: 75%;
+    margin: 10% auto 5%;
+  }
+  #info_section p + p {
+    width: 75%;
+    margin: 0 auto 5%;
   }
   #info_section img {
     width: 25%;

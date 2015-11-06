@@ -24,13 +24,15 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-.clearfix:after {
+.clearfix {
+    &:after {
 	visibility: hidden;
 	display: block;
 	font-size: 0;
 	content: " ";
 	clear: both;
 	height: 0;
-	}
+	};
+}
        
 
