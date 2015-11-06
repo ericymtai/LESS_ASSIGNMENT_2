@@ -132,20 +132,19 @@ header {
 }
 header nav ul {
   list-style: none;
+  width: 100%;
   margin: 0;
 }
 header nav ul li {
   display: inline-block;
-  margin: 0;
 }
 header nav ul li a {
   display: block;
-  font-size: 1.7em;
+  font-size: 1.4em;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.94);
   background-color: #e93f00;
-  /*padding: 2% 4% 2%;*/
-  letter-spacing: .1em;
+  padding: .5em 2em ;
 }
 header nav ul li a:hover {
   background-color: #2845bf;
@@ -155,19 +154,17 @@ header nav ul li a:hover {
   header {
     margin: 0;
   }
-  header .mainNav {
-    text-align: center;
-  }
   header nav {
     width: 100%;
   }
   header nav ul {
+    text-align: center;
     margin: 0 auto;
   }
   header nav ul li a {
-    font-size: .4em;
+    font-size: 1.2em;
     margin-bottom: 1em;
-    /*margin:  0 7% 0 0;*/
+    padding: .5em 1em ;
   }
 }
 @media screen and (max-width: 410px) {
@@ -175,8 +172,13 @@ header nav ul li a:hover {
     /*margin: 2% 0 0 10%;*/
     margin: 2% 0;
   }
+  header nav ul li {
+    display: block;
+  }
   header nav ul li a {
+    font-size: 1.3em;
     margin: 5% 0;
+    padding: 1em 2em;
   }
 }
 .active {
@@ -316,7 +318,7 @@ section .article_content {
   padding-right: 3%;
 }
 section .article_content > p:first-child,
-section .res_content {
+.res_content {
   margin: 5% 0;
 }
 section .article_content span {
@@ -404,8 +406,10 @@ section .article_content img {
     font-size: 1.1em;
   }
   section article img {
+    display: block;
     margin-bottom: 5%;
-    margin-left: 30%;
+    /*margin-left:  30%;*/
+    margin: 0 auto;
     width: 40%;
   }
   section article .sub_content {
@@ -415,7 +419,7 @@ section .article_content img {
     padding-right: 3%;
   }
   section .article_content > p:first-child,
-  section .res_content {
+  .res_content {
     margin: 5% auto;
   }
   section .article_content p {
@@ -434,6 +438,13 @@ section .article_content img {
   section .article_content img {
     margin: 5% 30%;
     width: 40%;
+  }
+}
+@media screen and (max-width: 320px) {
+  section article .content img {
+    width: 80%;
+    margin: 0 auto;
+    /*text-align: center;*/
   }
 }
 #info_section,
@@ -507,7 +518,6 @@ footer ul li:last-child a::after {
     margin: 5% auto;
   }
   #info_section p + p {
-    /*                font-size: .9em;*/
     width: 85%;
     margin: 1% auto 2%;
   }
