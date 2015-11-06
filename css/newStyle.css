@@ -406,10 +406,8 @@ section .article_content img {
     font-size: 1.1em;
   }
   section article img {
-    display: block;
-    margin-bottom: 5%;
-    /*margin-left:  30%;*/
-    margin: 0 auto;
+    float: none;
+    margin: 0 auto 5%;
     width: 40%;
   }
   section article .sub_content {
@@ -441,9 +439,9 @@ section .article_content img {
   }
 }
 @media screen and (max-width: 320px) {
-  section article .content img {
+  section article img {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 5%;
     /*text-align: center;*/
   }
 }

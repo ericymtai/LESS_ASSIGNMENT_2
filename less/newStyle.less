@@ -317,10 +317,8 @@ section {
                 font-size: 1.1em;
             };
             img {
-                display: block;
-                margin-bottom: @size;
-                /*margin-left:  30%;*/
-                margin: 0 auto;
+                float: none;
+                margin: 0 auto @size;
                 width: 40%;   
             };
             .sub_content  {
@@ -354,9 +352,9 @@ section {
     
     // section media 320 
     @media screen and (max-width: 320px) {
-         article .content img {
+         article img {
             width: 80%;
-            margin: 0 auto;
+            margin: 0 auto @size;
             /*text-align: center;*/
         }
     };  // end section media 320 
