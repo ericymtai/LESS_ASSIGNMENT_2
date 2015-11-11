@@ -177,7 +177,7 @@ header {
     // right side content
     article {
         width: 70%;
-        float: left;
+        margin-bottom:3em;
         hr {
             width: 95%;
             margin-bottom: 6em;
@@ -191,6 +191,7 @@ header {
             .h2;
             font-style: italic;
             letter-spacing: .03em;
+            line-height: 1.5em;
             .my-mixin-dark(#e80d15); 
             margin: .2em 0 .9em;
         };
@@ -228,10 +229,9 @@ header {
          };
         .@{contM} {
             width: 80%;
-            float: left;
             font-size: 1.2em;
             .my-mixin-dark(#0a4f27); 
-         };
+         }; // end article .main_content
         .@{contS} {
             width: 70%;
             margin-left: 2%;
@@ -241,7 +241,7 @@ header {
         };  // end article .sub_content
     };   // end right side content
     
-    .article_content {
+    .@{artCon} {
         padding-right: 3%;
         & > p:first-child {
             margin: 3em 0;
@@ -320,8 +320,9 @@ header {
                 margin: 6.5em auto;
             };
             h2 {
-                margin-top: -1.5em;
+                margin: -1.5em 0 1.8em 0;
                 line-height: 1.5em;
+                width: 95%;
             }
             p {
                 display: block;
@@ -371,7 +372,7 @@ header {
                 margin: .5em auto;
             };
             h2 {
-                margin-top: 1em;
+                margin-top: 1.2em;
             };
             img {
                 width: 80%;

@@ -259,7 +259,7 @@ header nav ul li a:hover {
 }
 #main_section article {
   width: 70%;
-  float: left;
+  margin-bottom: 3em;
 }
 #main_section article hr {
   width: 95%;
@@ -276,6 +276,7 @@ header nav ul li a:hover {
   line-height: .4em;
   font-style: italic;
   letter-spacing: .03em;
+  line-height: 1.5em;
   color: #d00c13;
   margin: .2em 0 .9em;
 }
@@ -315,7 +316,6 @@ header nav ul li a:hover {
 }
 #main_section article .main_content {
   width: 80%;
-  float: left;
   font-size: 1.2em;
   color: #07381c;
 }
@@ -329,8 +329,7 @@ header nav ul li a:hover {
 #main_section .article_content {
   padding-right: 3%;
 }
-#main_section .article_content > p:first-child,
-.res_content {
+#main_section .article_content > p:first-child {
   margin: 3em 0;
 }
 #main_section .article_content span {
@@ -409,8 +408,9 @@ header nav ul li a:hover {
     margin: 6.5em auto;
   }
   #main_section article h2 {
-    margin-top: -1.5em;
+    margin: -1.5em 0 1.8em 0;
     line-height: 1.5em;
+    width: 95%;
   }
   #main_section article p {
     display: block;
@@ -457,7 +457,7 @@ header nav ul li a:hover {
     margin: .5em auto;
   }
   #main_section article h2 {
-    margin-top: 1em;
+    margin-top: 1.2em;
   }
   #main_section article img {
     width: 80%;
